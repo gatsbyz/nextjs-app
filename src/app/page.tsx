@@ -1,6 +1,7 @@
-'use client'
+'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+
 import Button from '@/components/buttons/Button';
 
 type VisitorLog = {
@@ -10,7 +11,7 @@ type VisitorLog = {
   message: string;
 };
 
-const BASE_URL = `http://${process.env.NEXT_PUBLIC_BACKEND_HOST}:${process.env.NEXT_PUBLIC_BACKEND_PORT}`
+const BASE_URL = `http://${process.env.NEXT_PUBLIC_BACKEND_HOST}:${process.env.NEXT_PUBLIC_BACKEND_PORT}`;
 
 const HomePage: React.FC = () => {
   const [logs, setLogs] = useState<VisitorLog[]>([]);
@@ -54,13 +55,13 @@ const HomePage: React.FC = () => {
       <h1>Jesse&apos;s Visitor Log</h1>
       <form onSubmit={handleSubmit}>
         <input
-          type="text"
+          type='text'
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Enter your message"
+          placeholder='Enter your message'
           required
         />
-        <Button type="submit" variant='dark' className='mt-4'>
+        <Button type='submit' variant='dark' className='mt-4'>
           Submit Log
         </Button>
       </form>
@@ -68,7 +69,8 @@ const HomePage: React.FC = () => {
       <ul>
         {logs.map((log) => (
           <li key={log.id}>
-            {new Date(log.visitedAt).toLocaleString()}: {log.message} (IP: {log.ip})
+            {new Date(log.visitedAt).toLocaleString()}: {log.message} (IP:{' '}
+            {log.ip})
           </li>
         ))}
       </ul>
