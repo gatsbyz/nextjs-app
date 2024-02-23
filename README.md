@@ -1,4 +1,4 @@
-# Simple Next.js + Tailwind CSS + TypeScript Project
+# \*Very\* Simple Next.js + Tailwind CSS + TypeScript Project
 
 Please use as boilerplate.
 
@@ -11,13 +11,14 @@ Please use as boilerplate.
 - 🐋 Docker
 
 ## Getting Started
+1. `npm i`
+2. `npm run build`
+3. `npm run start` for production
+4. `npm run dev` for dev
 
-### 1. Clone this template using one of the three ways
+## Docker
+`docker.io/library/nextjs-app:latest` (it's public :D)
 
-1. Use this repository as template
-
-   **Disclosure:** by using this repository as a template, there will be an attribution on your repository.
-
-   I'll appreciate if you do, so this template can be known by others too 😄
-
+### Use this repository as template:
+https://github.com/theodorusclarence/ts-nextjs-tailwind-starter
    ![Use as template](https://user-images.githubusercontent.com/55318172/129183039-1a61e68d-dd90-4548-9489-7b3ccbb35810.png)
