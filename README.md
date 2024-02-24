@@ -11,13 +11,16 @@ Please use as boilerplate.
 - 🐋 Docker
 
 ## Getting Started
-1. `npm i`
+1. `npm install`
 2. `npm run build`
 3. `npm run start` for production
 4. `npm run dev` for dev
 
 ## Docker
-`docker.io/library/nextjs-app:latest` (it's public :D)
+`docker pull ghcr.io/gatsbyz/nextjs-app:latest` - it's public :D
+
+## Need a compatible back-end?
+Check out https://github.com/gatsbyz/node-app
 
 ### Use this repository as template:
 https://github.com/theodorusclarence/ts-nextjs-tailwind-starter
