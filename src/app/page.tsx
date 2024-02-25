@@ -1,8 +1,11 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
+import type { InferGetServerSidePropsType } from 'next'
+ 
 
 import Button from '@/components/buttons/Button';
+import { addLog, fetchLogs } from '@/lib/visitor-logs';
 
 type VisitorLog = {
   id: number;
@@ -11,45 +14,41 @@ type VisitorLog = {
   message: string;
 };
 
-const BASE_URL = `http://${process.env.NEXT_PUBLIC_BACKEND_HOST}:${process.env.NEXT_PUBLIC_BACKEND_PORT}`;
-
-const HomePage: React.FC = () => {
+export default function HomePage() {
   const [logs, setLogs] = useState<VisitorLog[]>([]);
   const [message, setMessage] = useState('');
-  const [clientIp, setClientIp] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
-  const fetchClientIp = async () => {
+  const fetch = useCallback(async () => {
+    setIsLoading(true);
     try {
-      const res = await fetch('https://api.ipify.org?format=json');
-      const data = await res.json();
-      setClientIp(data.ip ?? 'unknown');
+      const data = await fetchLogs();
+      setLogs(data as unknown as VisitorLog[]);
     } catch (error) {
-      console.error('Failed to fetch client IP', error);
+      console.error('Failed to fetch logs', error);
+    } finally {
+      setIsLoading(false);
     }
-  };
-
-  const fetchLogs = async () => {
-    const res = await fetch(`${BASE_URL}/api/v1/visitor-log`);
-    const data = await res.json();
-    setLogs(data);
-  };
-
-  useEffect(() => {
-    fetchClientIp();
-    fetchLogs();
   }, []);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    await fetch(`${BASE_URL}/api/v1/visitor-log?ip=${clientIp}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message, ip: clientIp }),
-    });
-    setMessage('');
-    fetchLogs();
-  };
+  useEffect(() => {
+    fetch();
+  }, [fetch]);
 
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    try {
+      await addLog(message);
+      setMessage('');
+      await fetch();
+    } catch (error) {
+      console.error('Failed to submit log', error);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [message, fetchLogs]);
+  
   return (
     <div>
       <h1>Jesse&apos;s Visitor Log</h1>
@@ -77,5 +76,3 @@ const HomePage: React.FC = () => {
     </div>
   );
 };
-
-export default HomePage;
