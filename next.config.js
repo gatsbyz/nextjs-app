@@ -4,6 +4,12 @@ const nextConfig = {
     dirs: ['src'],
   },
 
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
+  },
+
   publicRuntimeConfig: {
     // remove private variables from processEnv
     processEnv: Object.fromEntries(
