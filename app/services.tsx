@@ -1,50 +1,65 @@
-import { Container, Title, Card, Text, Badge, List } from '@mantine/core';
-import React from 'react';
+import { Container, Title, List, Text, Accordion, Card, SimpleGrid } from '@mantine/core';
+import React, { useState } from 'react';
 
 export default function ServicesPage() {
-  const currentServices = {
-    specialties: ["Repairs", "Installation", "Maintenance", "Assembly", "Painting", "Cleaning"],
-    workFocus: ["Doors", "Walls (inside)", "Cabinets", "Shelving", "Tiling", "Wall hangings", "Furniture"],
-    additionalOffers: ["Interior painting", "Dry wall repair & texturing", "Furniture and equipment assembly", "Picture hanging and art installation", "TV mounting"]
-  };
+  const [opened, setOpened] = useState<string[]>(['servicesOffered', 'comingSoon']);
 
-  const comingSoonServices = ["Windows", "Walls (outside)", "Gutters", "Molding or baseboards", "Flooring", "Appliances", "Plumbing", "Electrical", "Lighting"];
+  const servicesOffered = [
+    {
+      category: "Handyman Services",
+      details: [
+        "Repairs, Installation, Maintenance, Assembly",
+        "Painting, Cleaning",
+        "Interior painting, Dry wall repair & texturing",
+        "Furniture and equipment assembly",
+        "Picture hanging and art installation, TV mounting"
+      ]
+    },
+    {
+      category: "Focus Areas",
+      details: [
+        "Doors, Walls (inside), Cabinets",
+        "Shelving, Tiling, Wall hangings, Furniture",
+        "Custom builds, repairs, and restorations"
+      ]
+    }
+  ];
+
+  const comingSoonServices = [
+    "Windows, Walls (outside), Gutters",
+    "Molding or baseboards, Flooring",
+    "Appliances, Plumbing, Electrical, Lighting"
+  ];
 
   return (
-    <Container>
-      <Title order={1} my="lg">Our Handyman Services</Title>
+<Container mb="xl" style={{ maxWidth: '100%' }}>
+      <Text ta="center" size="xl" fw={500} mt="md">
+        Our Services
+      </Text>
       
-      <Card shadow="sm" p="lg" radius="md" mb="md">
-        <Title order={2}>Specialties</Title>
-        <List>
-          {currentServices.specialties.map(service => <List.Item key={service}>{service}</List.Item>)}
-        </List>
-      </Card>
+      <SimpleGrid cols={2} spacing="lg">
+        {servicesOffered.map((service, index) => (
+          <Card key={index} shadow="xl" padding="lg">
+            <Text size="xl" fw={500} mb="md">{service.category}</Text>
+            <List withPadding spacing="sm">
+              {service.details.map((detail, detailIndex) => (
+                <List.Item key={detailIndex}>{detail}</List.Item>
+              ))}
+            </List>
+          </Card>
+        ))}
 
-      <Card shadow="sm" p="lg" radius="md" mb="md">
-        <Title order={2}>Work Focus</Title>
-        <List>
-          {currentServices.workFocus.map(focus => <List.Item key={focus}>{focus}</List.Item>)}
-        </List>
-      </Card>
-
-      <Card shadow="sm" p="lg" radius="md" mb="md">
-        <Title order={2}>Additional Offers</Title>
-        <List>
-          {currentServices.additionalOffers.map(offer => <List.Item key={offer}>{offer}</List.Item>)}
-        </List>
-      </Card>
-
-      <Card shadow="sm" p="lg" radius="md" mb="md" style={{ textDecoration: "line-through" }}>
-        <Title order={2} style={{ color: "#999" }}>Coming Soon</Title>
-        <List>
-          {comingSoonServices.map(service => (
-            <List.Item key={service} style={{ color: "#999" }}>
-              {service}
-            </List.Item>
-          ))}
-        </List>
-      </Card>
+        <Card shadow="sm" padding="lg" style={{ gridColumn: 'span 2' }}>
+          <Text size="xl" fw={500} mb="md" style={{ color: "#999" }}>Coming Soon</Text>
+          <List withPadding spacing="sm" style={{ color: "#999" }}>
+            {comingSoonServices.map((service, index) => (
+              <List.Item key={index} style={{ textDecoration: "line-through" }}>
+                {service}
+              </List.Item>
+            ))}
+          </List>
+        </Card>
+      </SimpleGrid>
     </Container>
   );
 }
