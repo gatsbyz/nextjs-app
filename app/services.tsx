@@ -20,7 +20,7 @@ export default function ServicesPage() {
       details: [
         "Doors, Walls (inside), Cabinets",
         "Shelving, Tiling, Wall hangings, Furniture",
-        "Custom builds, repairs, and restorations"
+        "Installations, repairs, and restorations"
       ]
     }
   ];
@@ -37,7 +37,11 @@ export default function ServicesPage() {
         Our Services
       </Text>
       
-      <SimpleGrid cols={2} spacing="lg">
+      <SimpleGrid
+        cols={{ base: 1, sm: 2, lg: 3 }}
+        spacing={{ base: 10, sm: 'xl' }}
+        verticalSpacing={{ base: 'md', sm: 'xl' }}
+      >
         {servicesOffered.map((service, index) => (
           <Card key={index} shadow="xl" padding="lg">
             <Text size="xl" fw={500} mb="md">{service.category}</Text>
@@ -49,7 +53,7 @@ export default function ServicesPage() {
           </Card>
         ))}
 
-        <Card shadow="sm" padding="lg" style={{ gridColumn: 'span 2' }}>
+        <Card shadow="sm" padding="lg">
           <Text size="xl" fw={500} mb="md" style={{ color: "#999" }}>Coming Soon</Text>
           <List withPadding spacing="sm" style={{ color: "#999" }}>
             {comingSoonServices.map((service, index) => (

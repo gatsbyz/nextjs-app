@@ -65,17 +65,31 @@ export default function HomePage() {
     <Container size="lg" px="md">
       <Stack gap="lg" align="center">
         <Box w="100%" p='20px 0' ta='center'>
-          <Image src="/logo.png" alt="Handy & Dandy Logo" w={100} h={100} mx="auto" />
-          <Text size="xl" fw={500} ta="left" my="xl">
+          <Image src="/logo.png" alt="Handy & Dandy Logo" w={150} h={150} mx="auto" />
+
+          <Button 
+            my="xl"
+            variant="light" 
+            color="blue" 
+            component="a" 
+            href="https://www.thumbtack.com/ny/brooklyn/furniture-assembly/handy-dandy/service/511660534258343947" 
+            target="_blank" 
+            leftSection={<IconExternalLink size={18} />}
+          >
+            Check out our portfolio on Thumbtack
+          </Button>
+
+          <Text size="xl" fw={500} mb="xl">
             We Serve Homes and Businesses in <TypingEffect words={['NYC', 'Brooklyn', 'Queens']} typingSpeed={120} deletingSpeed={120} delayBetweenWords={1000} />
           </Text>
-          <Text size="xl" fw={500} mt="md">
+
+          <Text size="xl" fw={500} my="xl">
             Our Mission
           </Text>
+          <Text size="lg" ta="center">
+            4 years ago (in 2020), we started helping out local homes and businesses with the goal to provide high quality services with more transparency and less BS, making the costs make sense to everyone. We are still serving NYC with that exact mentality. All services are delivered by individuals with engineering degrees and years of experience in construction, repair, assembly, and related engineering fields.
+          </Text>
         </Box>
-        <Text size="lg" ta="center">
-          4 years ago (in 2020), we started helping out local homes and businesses with the goal to provide high quality services with more transparency and less BS, making the costs make sense to everyone. We are still serving NYC with that exact mentality. All services are delivered by individuals with engineering degrees and years of experience in construction, repair, assembly, and related engineering fields.
-        </Text>
         
         <ServicesPage/>
         
