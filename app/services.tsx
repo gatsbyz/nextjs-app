@@ -34,7 +34,7 @@ export default function ServicesPage() {
   return (
 <Container mb="xl" style={{ maxWidth: '100%' }}>
       <Text ta="center" size="xl" fw={500} my="md">
-        Our Services
+        🛠️ Our Services 🛠️
       </Text>
       
       <SimpleGrid

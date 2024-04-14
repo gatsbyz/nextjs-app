@@ -54,11 +54,23 @@ const TypingEffect = ({
   );
 };
 
+
+function decode(encodedString: string) {
+  // Decode the Base64 string to normal text
+  const decodedBytes = atob(encodedString);
+  // Convert the numbers back to the original phone number
+  const originalNumber = decodedBytes.split('').map(function(char) {
+    return String.fromCharCode(char.charCodeAt(0) - 1);
+  }).join('');
+  return originalNumber;
+}
+
 export default function HomePage() { 
   const [showPhoneNumber, setShowPhoneNumber] = useState(false); 
   const theme = useMantineTheme();
   const handleShowPhoneNumber = () => setShowPhoneNumber(true);
-  const phoneNumber = "+1 (404) 840-4655";
+  const encodedPhoneNumber = "LDIhKTUxNSohOTUxLjU3NjY=";
+  const phoneNumber = decode(encodedPhoneNumber);
   const whatsappMessage = encodeURIComponent("Hello, I'm interested in your handyman services.");
   
   return (
@@ -84,7 +96,7 @@ export default function HomePage() {
           </Text>
 
           <Text size="xl" fw={500} my="xl">
-            Our Mission
+            ⭐ Our Mission ⭐
           </Text>
           <Text size="lg" ta="center">
             4 years ago (in 2020), we started helping out local homes and businesses with the goal to provide high quality services with more transparency and less BS, making the costs make sense to everyone. We are still serving NYC with that exact mentality. All services are delivered by individuals with engineering degrees and years of experience in construction, repair, assembly, and related engineering fields.
@@ -95,7 +107,7 @@ export default function HomePage() {
         
         <Box w="100%" p='20px 0' ta='center'>
           <Text size="xl" fw={500} my="md">
-            Contact us
+          ☎️ Contact us ☎️
           </Text>
           <Group grow wrap="nowrap">
             <Button variant="outline" component="a" href="https://t.me/gatsbeta" target="_blank" leftSection={<IconBrandTelegram size={18} />}>
