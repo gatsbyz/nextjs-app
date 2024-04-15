@@ -5,7 +5,7 @@ import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './header.module.css';
 
 const userLinks = [
-  { link: '#', label: 'Contact Us' },
+  { link: '#', label: 'Privacy & Security' },
 //   { link: '#', label: 'Account settings' },
 //   { link: '#', label: 'Support options' },
 ];
@@ -13,6 +13,7 @@ const userLinks = [
 const mainLinks = [
   { link: '#', label: 'Our Mission' },
   { link: '#', label: 'Services' },
+  { link: '#', label: 'Contact Us' },
 ];
 
 export function Header() {
