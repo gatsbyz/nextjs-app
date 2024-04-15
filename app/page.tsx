@@ -1,9 +1,10 @@
 'use client';
 
-import { Container, Text, Group, Button, Image, Stack, useMantineTheme, Box, Card, Title } from '@mantine/core';
+import { Container, Text, Group, Button, Image, Stack, useMantineTheme, Box, Card, Title, SimpleGrid } from '@mantine/core';
 import React, { useEffect, useState } from 'react';
 import ServicesPage from './services';
 import { IconBrandTelegram, IconBrandWhatsapp, IconPhone, IconExternalLink } from '@tabler/icons-react';
+import { Footer } from './footer';
 
 const TypingEffect = ({
   words = [""],
@@ -77,7 +78,13 @@ export default function HomePage() {
     <Container size="lg" px="md">
       <Stack gap="lg" align="center">
         <Box w="100%" p='20px 0' ta='center'>
-          <Image src="/logo.png" alt="Handy & Dandy Logo" w={150} h={150} mx="auto" />
+          <Image src="/logo.png" alt="Handy & Dandy Logo" w={150} h={150} mx="auto" mb="xl"/>
+
+          <Stack mx="auto" justify="left">
+            <Text size="xl" fw={500}>
+            ✅ We are fully insured. Request for a COI.
+            </Text>
+          </Stack>
 
           <Button 
             my="xl"
@@ -109,7 +116,11 @@ export default function HomePage() {
           <Text size="xl" fw={500} my="md">
           ☎️ Contact us ☎️
           </Text>
-          <Group grow wrap="nowrap">
+          <SimpleGrid
+            cols={{ base: 1, sm: 2, lg: 3 }}
+            spacing={{ base: 10, sm: 'xl' }}
+            verticalSpacing={{ base: 'md', sm: 'xl' }}
+          >
             <Button variant="outline" component="a" href="https://t.me/gatsbeta" target="_blank" leftSection={<IconBrandTelegram size={18} />}>
               Telegram
             </Button>
@@ -127,9 +138,29 @@ export default function HomePage() {
                 Show Phone Number
               </Button>
             )}
-          </Group>
+          </SimpleGrid>
+          {/* <Group grow wrap="nowrap">
+            <Button variant="outline" component="a" href="https://t.me/gatsbeta" target="_blank" leftSection={<IconBrandTelegram size={18} />}>
+              Telegram
+            </Button>
+            <Button variant="outline" component="a" href={`https://wa.me/4048404655?text=${whatsappMessage}`} target="_blank" leftSection={<IconBrandWhatsapp size={18} />}>
+              WhatsApp
+            </Button>
+            {showPhoneNumber ? (
+              <Text>
+                <a href={`tel:${phoneNumber}`} style={{ textDecoration: "none", color: theme.colors.blue[6] }}>
+                  {phoneNumber}
+                </a>
+              </Text>
+            ) : (
+              <Button variant="outline" onClick={handleShowPhoneNumber} leftSection={<IconPhone size={18} />}>
+                Show Phone Number
+              </Button>
+            )}
+          </Group> */}
         </Box>
       </Stack>
+      <Footer></Footer>
     </Container>
   );
 }
