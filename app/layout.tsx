@@ -4,8 +4,8 @@ import { MantineProvider, ColorSchemeScript } from "@mantine/core";
 import { theme } from "../theme";
 
 export const metadata = {
-  title: "Handy & Dandy - Handyman serving NYC Brooklyn Queens",
-  description: "A caring and affordable handyman service for your home and business - drywall repairs, appliance installation, tv mounting, interior painting, picture & art installation, tiling, furniture, maintenance, assembly, shelving",
+  title: "Handy & Dandy - Expert Handyman in Williamsburg Brooklyn NYC Queens - Appliance Installation, Drywall Repairs, Interior Painting & Furnitures",
+  description: "Top-rated handyman services in New York City - A caring and affordable handyman service for your home and business. Drywall repairs, appliance installation, tv mounting, interior painting, picture & art installation, tiling, furniture, maintenance, assembly, shelving. Specializing in appliance installation, drywall repair, and more in Williamsburg, Brooklyn, and Queens.",
 };
 
 export default function RootLayout({ children }: { children: any }) {
