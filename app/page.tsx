@@ -6,6 +6,7 @@ import ServicesPage from './services';
 import { IconBrandTelegram, IconBrandWhatsapp, IconPhone, IconExternalLink } from '@tabler/icons-react';
 import { Footer } from './footer';
 import { Header } from './header';
+import Link from 'next/link';
 
 const TypingEffect = ({
   words = [""],
@@ -97,6 +98,11 @@ export default function HomePage() {
           >
             Check out our portfolio on Thumbtack
           </Button>
+          
+          <Link className="widget" href="https://www.thumbtack.com/ny/brooklyn/furniture-assembly/handy-dandy/service/511660534258343947" target="_blank">
+            <Image src="https://cdn.thumbtackstatic.com/fe-assets-web/media/pages/profile/standard-widgets/pro-svg/orange/2024.svg" alt="Handy & Dandy Logo" w={192} h={192} mx="auto" mb="xl"/> 
+            <script src="https://www.thumbtack.com/profile/widgets/scripts/?service_pk=511660534258343947&widget_id=profile"></script>
+          </Link>
 
           <Text size="xl" fw={500} my="xl">
             ⭐ Our Mission ⭐
@@ -139,6 +145,24 @@ export default function HomePage() {
         <Text size="xl" fw={500}>
             ✅ Fully insured. Request for a COI.
         </Text>
+        
+        <Box className="widget" id="tt-review-widget-star">
+          <Box id="tt-dynamic">
+            <img src="https://cdn.thumbtackstatic.com/fe-assets-web/media/logos/thumbtack/wordmark.svg" alt="Thumbtack" class="tt-logo" />
+            <a target="_blank" href="https://www.thumbtack.com/ny/brooklyn/furniture-assembly/handy-dandy/service/511660534258343947">
+            <div>Handy & Dandy</div>
+            </a>
+          </Box>
+          <Box id="tt-dynamic">
+            <img src="https://cdn.thumbtackstatic.com/fe-assets-web/media/pages/profile/standard-widgets/review-widget/orange_star.svg" />
+            <img src="https://cdn.thumbtackstatic.com/fe-assets-web/media/pages/profile/standard-widgets/review-widget/orange_star.svg" />
+            <img src="https://cdn.thumbtackstatic.com/fe-assets-web/media/pages/profile/standard-widgets/review-widget/orange_star.svg" />
+            <img src="https://cdn.thumbtackstatic.com/fe-assets-web/media/pages/profile/standard-widgets/review-widget/orange_star.svg" />
+            <img src="https://cdn.thumbtackstatic.com/fe-assets-web/media/pages/profile/standard-widgets/review-widget/orange_star.svg" />
+            {/* <span>9 reviews</span> */}
+            <script src="https://www.thumbtack.com/profile/widgets/scripts/?service_pk=511660534258343947&widget_id=review&type=star"></script>
+          </Box>
+        </Box>
       </Stack>
       
       <Footer></Footer>
