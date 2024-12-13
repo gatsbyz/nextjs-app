@@ -11,9 +11,9 @@ const userLinks = [
 ];
 
 const mainLinks = [
-  { link: '#', label: 'Our Mission' },
-  { link: '#', label: 'Services' },
-  { link: '#', label: 'Contact Us' },
+  { link: '/mission', label: 'Our Mission' },
+  { link: '/services', label: 'Services' },
+  { link: '/contact', label: 'Contact Us' },
 ];
 
 export function Header() {
@@ -49,7 +49,7 @@ export function Header() {
   return (
     <header className={classes.header}>
       <Container className={classes.inner}>
-      <Image src="/logo.png" alt="Handy & Dandy Logo" w={70} h={70} />
+      <Image src="/logo.png" alt="Handy & Dandy Logo" w={210} h={70} />
         <Box className={classes.links} visibleFrom="sm">
           <Group justify="flex-end">{secondaryItems}</Group>
           <Group gap={0} justify="flex-end" className={classes.mainLinks}>

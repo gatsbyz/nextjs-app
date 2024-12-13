@@ -7,6 +7,8 @@ import { IconBrandTelegram, IconBrandWhatsapp, IconPhone, IconExternalLink } fro
 import { Footer } from './footer';
 import { Header } from './header';
 import Link from 'next/link';
+import { GetInTouch } from './GetInTouch';
+import { Subgrid } from './SubGrid';
 
 const TypingEffect = ({
   words = [""],
@@ -72,7 +74,7 @@ export default function HomePage() {
   const [showPhoneNumber, setShowPhoneNumber] = useState(false); 
   const theme = useMantineTheme();
   const handleShowPhoneNumber = () => setShowPhoneNumber(true);
-  const encodedPhoneNumber = "LDIhKTUxNSohOTUxLjU3NjY=";
+  const encodedPhoneNumber = "LDIhKToyOCohODEyLjQ1ODI=";
   const phoneNumber = decode(encodedPhoneNumber);
   const whatsappMessage = encodeURIComponent("Hello, I'm interested in your handyman services.");
   
@@ -84,7 +86,7 @@ export default function HomePage() {
           {/* <Image src="/logo.png" alt="Handy & Dandy Logo" w={150} h={150} mx="auto" mb="xl"/> */}
 
           <Text size="xl" fw={500} >
-            We Serve Homes and Businesses in <TypingEffect words={['NYC', 'Brooklyn', 'Queens']} typingSpeed={120} deletingSpeed={120} delayBetweenWords={1000} />
+            We Serve Homes and Businesses in <TypingEffect words={['NYC', 'Brooklyn', 'Queens']} typingSpeed={120} deletingSpeed={200} delayBetweenWords={1000} />
           </Text>
 
           <Button 
@@ -111,9 +113,13 @@ export default function HomePage() {
             4 years ago (in 2020), we started helping out local homes and businesses with the goal to provide high quality services with more transparency and less BS, making the costs make sense to everyone. We are still serving NYC with that exact mentality. All services are delivered by individuals with engineering degrees and years of experience in construction, repair, assembly, and related engineering fields.
           </Text>
         </Box>
+
+        <Subgrid></Subgrid>
         
         <ServicesPage/>
         
+        <GetInTouch/>
+
         <Box w="100%" p='20px 0' ta='center'>
           <Text size="xl" fw={500} my="md">
           ☎️ Contact us ☎️
@@ -123,10 +129,10 @@ export default function HomePage() {
             spacing={{ base: 10, sm: 'xl' }}
             verticalSpacing={{ base: 'md', sm: 'xl' }}
           >
-            <Button variant="outline" component="a" href="https://t.me/gatsbeta" target="_blank" leftSection={<IconBrandTelegram size={18} />}>
+            <Button variant="outline" component="a" href="https://t.me/handymankurt" target="_blank" leftSection={<IconBrandTelegram size={18} />}>
               Telegram
             </Button>
-            <Button variant="outline" component="a" href={`https://wa.me/4048404655?text=${whatsappMessage}`} target="_blank" leftSection={<IconBrandWhatsapp size={18} />}>
+            <Button variant="outline" component="a" href={`https://wa.me/9177013471?text=${whatsappMessage}`} target="_blank" leftSection={<IconBrandWhatsapp size={18} />}>
               WhatsApp
             </Button>
             {showPhoneNumber ? (
@@ -148,7 +154,7 @@ export default function HomePage() {
         
         <Box className="widget" id="tt-review-widget-star">
           <Box id="tt-dynamic">
-            <img src="https://cdn.thumbtackstatic.com/fe-assets-web/media/logos/thumbtack/wordmark.svg" alt="Thumbtack" class="tt-logo" />
+            <img src="https://cdn.thumbtackstatic.com/fe-assets-web/media/logos/thumbtack/wordmark.svg" alt="Thumbtack" className="tt-logo" />
             <a target="_blank" href="https://www.thumbtack.com/ny/brooklyn/furniture-assembly/handy-dandy/service/511660534258343947">
             <div>Handy & Dandy</div>
             </a>
