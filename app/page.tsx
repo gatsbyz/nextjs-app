@@ -9,6 +9,7 @@ import { Header } from './header';
 import Link from 'next/link';
 import { GetInTouch } from './GetInTouch';
 import { Subgrid } from './SubGrid';
+import { BadgeCard } from './BadgeCard';
 
 const TypingEffect = ({
   words = [""],
@@ -110,20 +111,21 @@ export default function HomePage() {
             ⭐ Our Mission ⭐
           </Text>
           <Text size="lg" ta="center">
-            4 years ago (in 2020), we started helping out local homes and businesses with the goal to provide high quality services with more transparency and less BS, making the costs make sense to everyone. We are still serving NYC with that exact mentality. All services are delivered by individuals with engineering degrees and years of experience in construction, repair, assembly, and related engineering fields.
+          🛠️ Started by helping out local homes and businesses with the goal to provide high quality services with more transparency and less BS. 
+          <br/>
+          🚀 Our goal is to perform with costs that make sense to everyone. Still serving NYC with that exact mentality.
+          <br/>
+          👷🏻 All services are delivered by individuals with years of experience in engineering, construction, repair, and installation.
+          <br/>
+          🗽 We service Manhattan, Brooklyn and Queens. We are proudly insured and able to provide COI.
           </Text>
         </Box>
-
-        <Subgrid></Subgrid>
         
         <ServicesPage/>
         
         <GetInTouch/>
 
         <Box w="100%" p='20px 0' ta='center'>
-          <Text size="xl" fw={500} my="md">
-          ☎️ Contact us ☎️
-          </Text>
           <SimpleGrid
             cols={{ base: 1, sm: 2, lg: 3 }}
             spacing={{ base: 10, sm: 'xl' }}

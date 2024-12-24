@@ -5,7 +5,7 @@ import classes from './GetInTouch.module.css';
 
 export function GetInTouch() {
   return (
-    <Paper shadow="md" radius="lg">
+    <Paper shadow="md" radius="xl">
       <div className={classes.wrapper}>
         <div className={classes.contacts} style={{ backgroundColor: "#3574B7" }}>
           <Text fz="lg" fw={700} className={classes.title} c="#fff">
