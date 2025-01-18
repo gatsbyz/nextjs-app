@@ -1,19 +1,18 @@
 import { useState } from 'react';
 import { Container, Anchor, Group, Burger, Box, Image } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { MantineLogo } from '@mantinex/mantine-logo';
-import classes from './header.module.css';
+import classes from './Header.module.css';
 
 const userLinks = [
-  { link: '#', label: 'Privacy & Security' },
-//   { link: '#', label: 'Account settings' },
-//   { link: '#', label: 'Support options' },
+  { link: '/privacy', label: 'Privacy & Security' },
+  // { link: '#', label: 'Account settings' },
+  // { link: '#', label: 'Support options' },
 ];
 
 const mainLinks = [
-  { link: '/mission', label: 'Our Mission' },
-  { link: '/services', label: 'Services' },
-  { link: '/contact', label: 'Contact Us' },
+  { link: '#mission', label: 'Our Mission' },
+  { link: '#services', label: 'Services' },
+  { link: '#contact', label: 'Contact Us' },
 ];
 
 export function Header() {
@@ -27,7 +26,7 @@ export function Header() {
       className={classes.mainLink}
       data-active={index === active || undefined}
       onClick={(event) => {
-        event.preventDefault();
+        // event.preventDefault();
         setActive(index);
       }}
     >
@@ -39,7 +38,7 @@ export function Header() {
     <Anchor
       href={item.link}
       key={item.label}
-      onClick={(event) => event.preventDefault()}
+      // onClick={(event) => event.preventDefault()}
       className={classes.secondaryLink}
     >
       {item.label}

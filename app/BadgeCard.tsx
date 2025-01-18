@@ -32,7 +32,7 @@ export function BadgeCard({ image, title, description, country, badges }: any) {
 
       <Card.Section className={classes.section}>
         <Text mt="md" className={classes.label} c="dimmed">
-          Perfect for you, if you enjoy
+          Right service for you if you have
         </Text>
         <Group gap={7} mt={5}>
           {features}

@@ -5,7 +5,12 @@ import classes from './GetInTouch.module.css';
 
 export function GetInTouch() {
   return (
+
     <Paper shadow="md" radius="xl">
+
+      <Text ta="center" size="xl" fw={500} my="md">
+      📱 Contact Us 📱
+      </Text>
       <div className={classes.wrapper}>
         <div className={classes.contacts} style={{ backgroundColor: "#3574B7" }}>
           <Text fz="lg" fw={700} className={classes.title} c="#fff">

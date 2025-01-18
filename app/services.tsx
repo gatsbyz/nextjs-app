@@ -8,47 +8,47 @@ export default function ServicesPage() {
   const servicesOffered = [
     {
       image:
-        'https://images.unsplash.com/photo-1437719417032-8595fd9e9dc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80',
-      title: 'Verudela Beach',
-      country: 'Croatia',
+        'https://dam.thdstatic.com/content/production/6tpLuz_7sCjGfwR0cQEtWQ/RCt1JhZTuvZ8lmSf0UocXg/Original%20file/types-of-drywall-section-1.jpg',
+      title: 'Walls',
+      country: 'Express',
       description:
-        'Completely renovated for the season 2020, Arena Verudela Bech Apartments are fully equipped and modernly furnished 4-star self-service apartments located on the Adriatic coastline by one of the most beautiful beaches in Pula.',
+        'Drywall, Cement, Brick walls. Drywall installation & repair. Anything related to walls, we can do.',
       badges: [
-        { emoji: '☀️', label: 'Sunny weather' },
-        { emoji: '🦓', label: 'Onsite zoo' },
-        { emoji: '🌊', label: 'Sea' },
-        { emoji: '🌲', label: 'Nature' },
-        { emoji: '🤽', label: 'Water sports' },
+        { emoji: '☀️', label: 'Hole in the wall' },
+        { emoji: '🦓', label: 'Ceiling water damage' },
+        { emoji: '🌊', label: 'TV mounting' },
+        { emoji: '🌲', label: 'Install lights' },
+        { emoji: '🤽', label: 'Wall hanging mirror' },
       ],
     },
     {
       image:
-        'https://images.unsplash.com/photo-1437719417032-8595fd9e9dc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80',
-      title: 'Verudela Beach',
-      country: 'Croatia',
+        'https://pizzazzpainting.com/wp-content/uploads/2021/10/shutterstock_645166399-min-scaled.jpg',
+      title: 'Painting',
+      country: 'Express',
       description:
-        'Completely renovated for the season 2020, Arena Verudela Bech Apartments are fully equipped and modernly furnished 4-star self-service apartments located on the Adriatic coastline by one of the most beautiful beaches in Pula.',
+        'From painting one wall to the whole apartment, we can do.',
       badges: [
-        { emoji: '☀️', label: 'Sunny weather' },
-        { emoji: '🦓', label: 'Onsite zoo' },
-        { emoji: '🌊', label: 'Sea' },
-        { emoji: '🌲', label: 'Nature' },
-        { emoji: '🤽', label: 'Water sports' },
+        { emoji: '☀️', label: 'Moving out' },
+        { emoji: '🦓', label: 'Moving in' },
+        { emoji: '🌊', label: 'New tenant in building' },
+        { emoji: '🌲', label: 'Refresh wall' },
+        { emoji: '🤽', label: 'Wall color change' },
       ],
     },
     {
       image:
-        'https://images.unsplash.com/photo-1437719417032-8595fd9e9dc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80',
-      title: 'Verudela Beach',
-      country: 'Croatia',
+        'https://media.istockphoto.com/id/1067496776/photo/top-view-of-drill-tool-and-another-equipment-on-wood-table-furniture-assembly-improvement-or.jpg?s=612x612&w=0&k=20&c=pW5vu2TK9yaOvqLG8jktB59DRIvVdr6eAVnI72RwPPI=',
+      title: 'Repairs',
+      country: 'Express',
       description:
-        'Completely renovated for the season 2020, Arena Verudela Bech Apartments are fully equipped and modernly furnished 4-star self-service apartments located on the Adriatic coastline by one of the most beautiful beaches in Pula.',
+        'Repair your furniture or appliances. If anything is out of order or broken, please call us. We can help.',
       badges: [
-        { emoji: '☀️', label: 'Sunny weather' },
-        { emoji: '🦓', label: 'Onsite zoo' },
-        { emoji: '🌊', label: 'Sea' },
-        { emoji: '🌲', label: 'Nature' },
-        { emoji: '🤽', label: 'Water sports' },
+        { emoji: '☀️', label: 'Broken microwave' },
+        { emoji: '🦓', label: 'Sofa leg is loose' },
+        { emoji: '🌊', label: 'Office chair not working' },
+        { emoji: '🌲', label: 'Outlet does not work' },
+        { emoji: '🤽', label: 'Door is not closing properly' },
       ],
     },
     // {
@@ -81,7 +81,7 @@ export default function ServicesPage() {
   return (
 <Container mb="xl" style={{ maxWidth: '100%' }}>
       <Text ta="center" size="xl" fw={500} my="md">
-        🛠️ Our Services 🛠️
+        🛠️ Top Services 🛠️
       </Text>
       
       <SimpleGrid
