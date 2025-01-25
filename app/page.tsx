@@ -2,8 +2,8 @@
 
 import { Container } from '@mantine/core';
 import React from 'react';
-import { Footer } from './footer';
-import { Header } from './header';
+import { Footer } from './Footer2';
+import { Header } from './Header2';
 import { Body } from './Body';
 
 export default function HomePage() { 
