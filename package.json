@@ -30,7 +30,8 @@
     "postcss": "^8.4.35",
     "postcss-preset-mantine": "1.13.0",
     "postcss-simple-vars": "^7.0.1",
-    "typescript": "5.4.2"
+    "typescript": "5.4.2",
+    "webpack": "^5.97.1"
   },
   "packageManager": "yarn@4.6.0"
 }
