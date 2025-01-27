@@ -1,7 +1,7 @@
 import { Anchor, Group, ActionIcon, rem, Image } from '@mantine/core';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
 import { MantineLogo } from '@mantinex/mantine-logo';
-import classes from './footer.module.css';
+import classes from './Footer.module.css';
 
 const links = [
   { link: '#contact', label: 'Contact' },
