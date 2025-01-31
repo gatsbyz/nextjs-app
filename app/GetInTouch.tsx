@@ -6,9 +6,9 @@ import classes from './GetInTouch.module.css';
 export function GetInTouch() {
   return (
 
-    <Paper shadow="md" radius="xl">
+    <Paper radius="xl">
 
-      <Text ta="center" size="xl" fw={500} mb="md">
+      <Text ta="center" size="xl" fw={500} my="md">
       📱 Contact Us 📱
       </Text>
       <div className={classes.wrapper}>
