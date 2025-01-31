@@ -14,11 +14,11 @@ export default function ServicesPage() {
       description:
         'Drywall, Cement, Brick walls. Drywall installation & repair. Anything related to walls, we can do.',
       badges: [
-        { emoji: '☀️', label: 'Hole in the wall' },
-        { emoji: '🦓', label: 'Ceiling water damage' },
-        { emoji: '🌊', label: 'TV mounting' },
-        { emoji: '🌲', label: 'Install lights' },
-        { emoji: '🤽', label: 'Wall hanging mirror' },
+        { emoji: '🕳️', label: 'Hole in the wall' },
+        { emoji: '💦', label: 'Ceiling water damage' },
+        { emoji: '📺', label: 'TV mounting' },
+        { emoji: '💡', label: 'Install lights' },
+        { emoji: '🪞', label: 'Wall hanging mirror' },
       ],
     },
     {
@@ -29,11 +29,11 @@ export default function ServicesPage() {
       description:
         'From painting one wall to the whole apartment, we can do.',
       badges: [
-        { emoji: '☀️', label: 'Moving out' },
-        { emoji: '🦓', label: 'Moving in' },
-        { emoji: '🌊', label: 'New tenant in building' },
-        { emoji: '🌲', label: 'Refresh wall' },
-        { emoji: '🤽', label: 'Wall color change' },
+        { emoji: '📦', label: 'Moving out' },
+        { emoji: '🧳', label: 'Moving in' },
+        { emoji: '👨‍👩‍👦', label: 'New tenant in building' },
+        { emoji: '🔄', label: 'Refresh wall' },
+        { emoji: '🎨', label: 'Wall color change' },
       ],
     },
     {
@@ -44,11 +44,11 @@ export default function ServicesPage() {
       description:
         'Repair your furniture or appliances. If anything is out of order or broken, please call us. We can help.',
       badges: [
-        { emoji: '☀️', label: 'Broken microwave' },
-        { emoji: '🦓', label: 'Sofa leg is loose' },
-        { emoji: '🌊', label: 'Office chair not working' },
-        { emoji: '🌲', label: 'Outlet does not work' },
-        { emoji: '🤽', label: 'Door is not closing properly' },
+        { emoji: '🍿', label: 'Broken microwave' },
+        { emoji: '🛋️', label: 'Sofa leg is loose' },
+        { emoji: '🪑', label: 'Office chair not working' },
+        { emoji: '🔌', label: 'Outlet does not work' },
+        { emoji: '🚪', label: 'Door is not closing properly' },
       ],
     },
     // {

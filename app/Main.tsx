@@ -83,7 +83,7 @@ export function Main() {
                         <script src="https://www.thumbtack.com/profile/widgets/scripts/?service_pk=511660534258343947&widget_id=profile"></script>
                     </Link>
 
-                    <Box id="mission" w="100%" p="20px 0" ta="center">
+                    <Box id="home" w="100%" p="20px 0" ta="center">
                         <Text size="xl" fw={500} my="xl">
                         ⭐ Our Mission ⭐
                         </Text>

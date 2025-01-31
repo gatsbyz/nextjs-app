@@ -10,7 +10,7 @@ const userLinks = [
 ];
 
 const mainLinks = [
-  { link: '#mission', label: 'Our Mission' },
+  { link: '#home', label: 'Home' },
   { link: '#services', label: 'Services' },
   { link: '#contact', label: 'Contact Us' },
 ];
