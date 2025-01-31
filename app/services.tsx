@@ -34,6 +34,7 @@ export default function ServicesPage() {
         { emoji: '👨‍👩‍👦', label: 'New tenant in building' },
         { emoji: '🔄', label: 'Refresh wall' },
         { emoji: '🎨', label: 'Wall color change' },
+        { emoji: '🐾', label: 'Scuff marks' },
       ],
     },
     {
@@ -45,10 +46,61 @@ export default function ServicesPage() {
         'Repair your furniture or appliances. If anything is out of order or broken, please call us. We can help.',
       badges: [
         { emoji: '🍿', label: 'Broken microwave' },
-        { emoji: '🛋️', label: 'Sofa leg is loose' },
-        { emoji: '🪑', label: 'Office chair not working' },
-        { emoji: '🔌', label: 'Outlet does not work' },
-        { emoji: '🚪', label: 'Door is not closing properly' },
+        { emoji: '🛋️', label: 'Loose sofa leg' },
+        { emoji: '🪑', label: 'Broken office chair' },
+        { emoji: '🔌', label: 'Broken outlet' },
+        { emoji: '🚪', label: 'Door not closing properly' },
+        { emoji: '🪟', label: 'Cracked window pane' },
+      ],
+    },
+    {
+      image:
+        'https://img.freepik.com/free-vector/neon-style-coming-soon-glowing-background-design_1017-25516.jpg',
+      title: 'Windows',
+      country: 'Consult',
+      description:
+        'Window services information will be updated soon',
+      badges: [
+      ],
+    },
+    {
+      image:
+        'https://img.freepik.com/free-vector/neon-style-coming-soon-glowing-background-design_1017-25516.jpg',
+      title: 'Appliances',
+      country: 'Consult',
+      description:
+        'Appliances information coming soon',
+      badges: [
+      ],
+    },
+    {
+      image:
+        'https://img.freepik.com/free-vector/neon-style-coming-soon-glowing-background-design_1017-25516.jpg',
+      title: 'Furniture Assembly',
+      country: 'Consult',
+      description:
+        'Furniture Assembly coming soon',
+      badges: [
+      ],
+    },
+    {
+      image:
+        'https://img.freepik.com/free-vector/neon-style-coming-soon-glowing-background-design_1017-25516.jpg',
+      title: 'Plumbing',
+      country: 'Consult',
+      description:
+        'Plubming coming soon',
+      badges: [
+      ],
+    },
+    {
+      image:
+        'https://img.freepik.com/free-vector/neon-style-coming-soon-glowing-background-design_1017-25516.jpg',
+      title: 'Electric',
+      country: 'Consult',
+      description:
+        'Electric coming soon',
+      badges: [
       ],
     },
     // {
