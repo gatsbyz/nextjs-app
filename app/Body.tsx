@@ -48,6 +48,7 @@ export function Body() {
                     cols={{ base: 1, sm: 2, lg: 3 }}
                     spacing={{ base: 10, sm: 'xl' }}
                     verticalSpacing={{ base: 'md', sm: 'xl' }}
+                     my="xl"
                 >
                     <Button variant="outline" component="a" href="https://t.me/handymankurt" target="_blank" leftSection={<IconBrandTelegram size={18} />}>
                     Telegram
@@ -69,7 +70,7 @@ export function Body() {
                 </SimpleGrid>
                 </Box>
                 <Text size="xl" fw={500}>
-                    ✅ Fully insured. Request for a COI.
+                    ✅ Insured & Licensed. Request for a COI.
                 </Text>
         </Stack>
     )

@@ -8,7 +8,7 @@ export function GetInTouch() {
 
     <Paper shadow="md" radius="xl">
 
-      <Text ta="center" size="xl" fw={500} my="md">
+      <Text ta="center" size="xl" fw={500} mb="md">
       📱 Contact Us 📱
       </Text>
       <div className={classes.wrapper}>
