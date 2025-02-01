@@ -29,7 +29,7 @@ export function Body() {
     const whatsappMessage = encodeURIComponent("Hello, I'm interested in your handyman services.");
   
     return (
-            <Stack gap="lg" align="center" id="body" pt={"86px"}>
+            <Stack gap="lg" align="center" id="body">
 
                 <Box className={classes.section} id="home">
                     <Main/>

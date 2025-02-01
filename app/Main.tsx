@@ -84,7 +84,7 @@ export function Main() {
                     </Link>
 
                     <Box id="home" w="100%" p="20px 0" ta="center">
-                        <Text size="xl" fw={500} my="xl">
+                        <Text size="xl" fw={500} my="md">
                         ⭐ Our Mission ⭐
                         </Text>
                         <Text size="lg" ta="center">

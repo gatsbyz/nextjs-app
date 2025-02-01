@@ -21,7 +21,7 @@ export function BadgeCard({ image, title, description, country, badges }: any) {
           <Text fz="lg" fw={500}>
             {title}
           </Text>
-          <Badge size="sm" variant="light">
+          <Badge size="sm" variant={country === "Express" ? "light" : "default"}>
             {country}
           </Badge>
         </Group>

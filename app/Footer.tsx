@@ -29,7 +29,7 @@ export function Footer() {
     <div className={classes.footer}>
       <div className={classes.inner}>
         {/* <MantineLogo size={28} /> */}
-        <Image src="/logo.png" alt="Handy & Dandy Logo" w={50} h={50} />
+        <Image src="/logo.png" w={180} h={45} />
 
         <Group className={classes.links}>{items}</Group>
 
