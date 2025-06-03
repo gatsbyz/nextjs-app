@@ -41,11 +41,11 @@ export function BadgeCard({ image, title, description, country, badges }: any) {
 
       <Group mt="xs">
         <Button radius="md" style={{ flex: 1 }}>
-          Show details
+          See our work
         </Button>
-        <ActionIcon variant="default" radius="md" size={36}>
+        {/* <ActionIcon variant="default" radius="md" size={36}>
           <IconHeart className={classes.like} stroke={1.5} />
-        </ActionIcon>
+        </ActionIcon> */}
       </Group>
     </Card>
   );

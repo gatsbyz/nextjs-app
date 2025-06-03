@@ -28,6 +28,7 @@ import {
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './Header.module.css';
+import Link from 'next/link';
 
 const mockdata = [
   {
@@ -100,7 +101,7 @@ export function Header() {
                 <a href="#" className={classes.link}>
                   <Center inline>
                     <Box component="span" mr={5}>
-                      Features
+                      Work
                     </Box>
                     <IconChevronDown size={16} color={theme.colors.blue[6]} />
                   </Center>
@@ -109,7 +110,7 @@ export function Header() {
 
               <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
                 <Group justify="space-between" px="md">
-                  <Text fw={500}>Features</Text>
+                  <Text fw={500}>Work</Text>
                   <Anchor href="#" fz="xs">
                     View all
                   </Anchor>
@@ -145,8 +146,10 @@ export function Header() {
           </Group>
 
           <Group visibleFrom="sm">
-            <Button variant="default">Log in</Button>
-            <Button>Sign up</Button>
+            {/* <Button variant="default">Log in</Button> */}
+            <Link href="https://linktr.ee/handymankurt" passHref legacyBehavior>
+              <Button component="a">Click To DM Us</Button>
+            </Link>
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
@@ -171,7 +174,7 @@ export function Header() {
           <UnstyledButton className={classes.link} onClick={toggleLinks}>
             <Center inline>
               <Box component="span" mr={5}>
-                Features
+                Work
               </Box>
               <IconChevronDown size={16} color={theme.colors.blue[6]} />
             </Center>
@@ -187,8 +190,10 @@ export function Header() {
           <Divider my="sm" />
 
           <Group justify="center" grow pb="xl" px="md">
-            <Button variant="default">Log in</Button>
-            <Button>Sign up</Button>
+            {/* <Button variant="default">Log in</Button> */}
+            <Link href="https://linktr.ee/handymankurt" passHref legacyBehavior>
+              <Button component="a">Click To DM Us</Button>
+            </Link>
           </Group>
         </ScrollArea>
       </Drawer>

@@ -11,7 +11,7 @@ export function GetInTouch() {
       <Text ta="center" size="xl" fw={500} my="md">
       📱 Contact Us 📱
       </Text>
-      <div className={classes.wrapper}>
+      {/* <div className={classes.wrapper}>
         <div className={classes.contacts} style={{ backgroundColor: "#3574B7" }}>
           <Text fz="lg" fw={700} className={classes.title} c="#fff">
             Contact information
@@ -29,7 +29,7 @@ export function GetInTouch() {
             <SimpleGrid cols={{ base: 1, sm: 2 }}>
               <TextInput label="Your name" placeholder="Your name" />
               <TextInput label="Your email" placeholder="hello@mail.com" required />
-            </SimpleGrid>
+            </SimpleGrid>ㅛㅁ구 ㄴ
 
             <TextInput mt="md" label="Subject" placeholder="Subject" required />
 
@@ -47,7 +47,7 @@ export function GetInTouch() {
             </Group>
           </div>
         </form>
-      </div>
+      </div> */}
     </Paper>
   );
 }
