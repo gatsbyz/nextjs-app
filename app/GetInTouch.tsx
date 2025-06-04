@@ -2,7 +2,7 @@ import { Box, Button, Group, Paper, SimpleGrid, Text, Textarea, TextInput, useMa
 // import bg from './bg.svg';
 import { ContactIconsList } from './ContactIcons';
 import classes from './GetInTouch.module.css';
-import { IconBrandTelegram, IconBrandWhatsapp, IconExternalLink, IconMail } from '@tabler/icons-react';
+import { IconBrandTelegram, IconBrandWhatsapp, IconExternalLink, IconMail, IconPhone } from '@tabler/icons-react';
 import { useState } from 'react';
   
 function decode(encodedString: string) {
